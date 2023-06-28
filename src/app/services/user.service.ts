@@ -10,7 +10,9 @@ export class UserService {
 
   constructor(private http:HttpClient) { }
 
+  //get userlist api
   getUser(){
-    return this.http.get(`${this.baseUrl}/api/users/`)
+    return this.http.get(`${this.baseUrl}/api/users`)
   }
+
 }
