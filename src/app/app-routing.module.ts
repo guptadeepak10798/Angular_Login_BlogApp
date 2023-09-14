@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AuthGuard } from './services/auth.guard';
+import { RegisterUserComponent } from './components/register-user/register-user.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,11 @@ const routes: Routes = [
     component:DashboardComponent,
     pathMatch: 'full',
     canActivate:[AuthGuard]
+  },
+  {
+    path:'register-user',
+    component:RegisterUserComponent,
+    pathMatch: 'full'
   }
 
 ];
@@ -30,3 +36,5 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
+
+

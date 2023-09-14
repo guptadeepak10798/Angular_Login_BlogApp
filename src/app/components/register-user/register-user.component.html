@@ -1,0 +1,73 @@
+
+<div class="container-fluid">
+  <div class="row">
+    
+    <div class="col-xs-12 col-sm-4">
+      
+        <mat-card>
+          <img mat-card-image src="./assets/sign_up_register.png" />
+        </mat-card>
+     
+    </div>
+    
+    
+    <div class="col-xs-12 col-sm-8">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title
+            ><h1>{{ registeration }}</h1></mat-card-title
+          >
+          <mat-card-subtitle>Welcome to our Blog Application</mat-card-subtitle>
+        </mat-card-header>
+
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <div class="form-row">
+            <div class="form-group">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Full Name</mat-label>
+                <input matInput formControlName="name"/>
+              </mat-form-field>
+            </div>
+
+            <div class="form-group">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput formControlName="email"/>
+              </mat-form-field>
+            </div>
+
+            <div class="form-group">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput formControlName="password"/>
+              </mat-form-field>
+            </div>
+
+            <div class="form-group">
+              <mat-form-field class="example-full-width" appearance="outline">
+                <mat-label>Tell me something about yourself</mat-label>
+                <textarea matInput formControlName="about"></textarea>
+              </mat-form-field>
+            </div>
+
+          </div>
+
+          <button mat-raised-button color="primary">Submit</button>
+        </form>
+      </mat-card>
+    </div>
+    
+  </div>
+</div>
+
+
+
+<!-- <b>{{ currentDate | date : "dd/MM/yyyy" }}</b>
+<p>{{ 100 | currency : "INR" }}</p>
+
+<p>{{ 1000 | number }}</p>
+
+<p>{{ "Mahesh" | uppercase }}</p>
+<p>{{ "Dalle" | lowercase }}</p> 
+<p>{{ { name: "makesh" } | json }}</p> -->
+

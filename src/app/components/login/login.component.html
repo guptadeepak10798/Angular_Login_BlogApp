@@ -10,7 +10,7 @@
           <!-- Two way data binding -->
             <form (ngSubmit)="onSubmit()">
 
-                <mat-form-field class="full-width" >
+                <mat-form-field class="full-width" appearance="outline" >
                     <mat-label>Username</mat-label>
                     <input 
                     [(ngModel)] = "credentials.username" 
@@ -20,7 +20,7 @@
                     matInput/>
                 </mat-form-field>
 
-                <mat-form-field class="full-width" >
+                <mat-form-field class="full-width" appearance="outline" >
                     <mat-label>Password</mat-label>
                     <input 
                     [(ngModel)] = "credentials.password"
@@ -32,7 +32,9 @@
                 <div class="container text-center">
                     <button mat-raised-button color="primary" type="submit">Login</button>
 
-                    <button mat-raised-button color="accent" type="submit" style="margin-left: 10px;">Reset</button>
+                    <button mat-raised-button color="accent" type="submit" style="margin-left: 10px;" 
+                      routerLink = "/register-user">Sign up 
+                    </button>
 
                 </div>
                 

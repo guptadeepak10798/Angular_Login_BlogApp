@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { error, log } from 'console';
+
 import { LoginService } from 'src/app/services/login.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { LoginService } from 'src/app/services/login.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  credentials = {
+   credentials = {
     username: '',
     password: '',
   };
@@ -38,8 +38,7 @@ export class LoginComponent implements OnInit {
         }
       )
     }else{
-      console.log('Fields are empty !! ');
-      
+      console.log('Fields are empty !! ');   
     }
 
   }
