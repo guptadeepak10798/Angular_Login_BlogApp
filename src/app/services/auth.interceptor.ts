@@ -23,7 +23,7 @@ export class AuthInterceptor implements HttpInterceptor {
     console.log('INTERCEPTOR TOKEN-> ', next);
     console.log('INTERCEPTOR TOKEN-> ', token);
 
-debugger 
+
 
     if (token != null) {
       newReq = newReq.clone({

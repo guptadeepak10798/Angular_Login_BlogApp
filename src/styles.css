@@ -13,3 +13,13 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin-top: 20px;
 }
 
+
+.success-snackbar {
+    background: #33f321;
+    color: black;
+}
+
+.failure-snackbar {
+    background: #e42006;
+    color: rgb(229, 233, 232);
+}

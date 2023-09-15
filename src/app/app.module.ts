@@ -21,6 +21,8 @@ import { RegisterUserComponent } from './components/register-user/register-user.
 import {MatSelectModule} from '@angular/material/select';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
+import { MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 @NgModule({
   declarations: [
@@ -45,6 +47,9 @@ import {MatCardModule} from '@angular/material/card';
     MatSelectModule,
     MatGridListModule,
     ReactiveFormsModule,
+    
+    MatSnackBarModule
+    // ToastrModule.forRoot({positionClass: 'toast-top-right',})
   ],
   providers: [
       LoginService,
