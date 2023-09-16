@@ -22,7 +22,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import { MatSnackBarModule} from '@angular/material/snack-bar';
-
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -48,7 +48,8 @@ import { MatSnackBarModule} from '@angular/material/snack-bar';
     MatGridListModule,
     ReactiveFormsModule,
     
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatProgressBarModule
     // ToastrModule.forRoot({positionClass: 'toast-top-right',})
   ],
   providers: [

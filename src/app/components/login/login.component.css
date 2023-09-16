@@ -11,3 +11,10 @@
     border-style:solid;
 } */
 
+#progress-bar {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+  }

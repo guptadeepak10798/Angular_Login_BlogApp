@@ -3,48 +3,66 @@
     <div class="row">
       <div class="col-md-6 offset-md-3">
         <div class="container text-center">
-          <img class="img-fluid" style="width: 100px" src="/assets/password.png" alt="" />
-          <h1 class="text-center" >Login here!!</h1>
+          <img
+            class="img-fluid"
+            style="width: 100px"
+            src="/assets/password.png"
+            alt=""
+          />
+          <h1 class="text-center">Login here!!</h1>
 
           <!-- creating form -->
           <!-- Two way data binding -->
-            <form (ngSubmit)="onSubmit()">
+          <form (ngSubmit)="onSubmit()">
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Username</mat-label>
+              <input
+                [(ngModel)]="credentials.username"
+                name="username"
+                required
+                type="text"
+                matInput
+              />
+            </mat-form-field>
 
-                <mat-form-field class="full-width" appearance="outline" >
-                    <mat-label>Username</mat-label>
-                    <input 
-                    [(ngModel)] = "credentials.username" 
-                    name="username"
-                    required 
-                    type="text" 
-                    matInput/>
-                </mat-form-field>
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Password</mat-label>
+              <input
+                [(ngModel)]="credentials.password"
+                name="password"
+                required
+                type="password"
+                matInput
+              />
+            </mat-form-field>
+            <div class="container text-center">
+              <button mat-raised-button color="primary" type="submit">
+                Login
+              </button>
 
-                <mat-form-field class="full-width" appearance="outline" >
-                    <mat-label>Password</mat-label>
-                    <input 
-                    [(ngModel)] = "credentials.password"
-                    name="password"
-                    required 
-                    type="password" 
-                    matInput/>
-                </mat-form-field>
-                <div class="container text-center">
-                    <button mat-raised-button color="primary" type="submit">Login</button>
-
-                    <button mat-raised-button color="accent" type="submit" style="margin-left: 10px;" 
-                      routerLink = "/register-user">Sign up 
-                    </button>
-
-                </div>
-                
-
-            </form>
-            <br>
-            <p class ="mt">{{credentials | json}}</p>
-
+              <button
+                mat-raised-button
+                color="accent"
+                type="submit"
+                style="margin-left: 10px"
+                routerLink="/register-user"
+              >
+                Sign up
+              </button>
+            </div>
+          </form>
+          <br />
+          <p class="mt">{{ credentials | json }}</p>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<!-- <mat-progress-bar
+  id="progress-bar" 
+  mode="determinate" 
+  [value]="progress" 
+  color="primary">
+</mat-progress-bar> -->
+

@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
     username: '',
     password: '',
   };
-
+  progress = 100;
   constructor(
     private loginService: LoginService,
     private _snackBar: MatSnackBar
