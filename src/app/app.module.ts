@@ -23,7 +23,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import { MatSnackBarModule} from '@angular/material/snack-bar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-
+import { UserProfileComponent } from './user-profile/user-profile.component';
+// import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     HomeComponent,
     LoginComponent,
     DashboardComponent,
-    RegisterUserComponent
+    RegisterUserComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     ReactiveFormsModule,
     
     MatSnackBarModule,
-    MatProgressBarModule
+    MatProgressBarModule,
     // ToastrModule.forRoot({positionClass: 'toast-top-right',})
   ],
   providers: [

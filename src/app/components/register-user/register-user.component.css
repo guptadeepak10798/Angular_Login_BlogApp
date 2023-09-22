@@ -45,7 +45,7 @@
 
 .mat-card {
   background: whitesmoke;
-  color: rgba(46, 27, 218, 0.87);
+  /* color: rgba(46, 27, 218, 0.87); */
 }
 
 .example-container mat-form-field + mat-form-field {
@@ -62,15 +62,15 @@
   align-items: center;
 } */
 
-body {
+/* body {
   text-align: center;
   text-transform: uppercase;
   padding: 50px 0;
-}
+} */
 
 
 
-.box {
+/* .box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,4 +81,4 @@ body {
   min-height: 200px;
   border: 2px #ccc solid;
   color: #fff;
-}
+} */

@@ -16,6 +16,10 @@ export class UserService {
     return this.http.get(`${this.baseUrl}/api/users/`)
   }
 
+  getUserDetailsById(id : number){
+    return this.http.get(`${this.baseUrl}/api/users/${id}`)
+  }
+
 
   
 

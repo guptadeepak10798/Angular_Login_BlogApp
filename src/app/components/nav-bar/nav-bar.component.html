@@ -1,7 +1,24 @@
-<mat-toolbar color="primary">
+<!-- <mat-toolbar color="primary">
     <span><a mat-icon-button routerLink = "/">Blog Application</a></span>
         <span class="example-spacer"></span>
     <a *ngIf="!loggedIn" mat-icon-button routerLink = "/login">Login</a>
-    <a *ngIf="loggedIn" mat-icon-button >User</a>
+    <a *ngIf="loggedIn" mat-icon-button >{{username}}</a>
     <a *ngIf="loggedIn" (click)="logoutUser()" mat-icon-button >Logout</a>
+</mat-toolbar> -->
+
+<mat-toolbar color="primary">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-7">
+            <span><a mat-icon-button routerLink = "/">Blog Application</a></span>
+        </div>
+        <div class="col-md-3">
+            <a *ngIf="loggedIn" mat-icon-button routerLink = "/userProfile"> Welcome {{username}} !</a>
+        </div>
+        <div class="col-md-2">
+            <a *ngIf="!loggedIn" mat-icon-button routerLink = "/login">Login</a>
+            <a *ngIf="loggedIn" (click)="logoutUser()" mat-icon-button >Logout</a>
+        </div>
+    </div>
+</div>
 </mat-toolbar>

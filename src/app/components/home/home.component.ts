@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
     // console.log(this.name);
 
     // console.log(this.data);
-debugger
+// debugger
     console.log('data ==> ', this.data);
     console.log('data2 ==> ', this.data2);
     console.log('myArr ==> ', this.myArr);

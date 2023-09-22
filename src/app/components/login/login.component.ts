@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
     username: '',
     password: '',
   };
+  // username: string = '';
   progress = 100;
   constructor(
     private loginService: LoginService,
@@ -34,17 +35,24 @@ export class LoginComponent implements OnInit {
         //jab sab kuch sahi sahi chalega
         (response: any) => {
           //success
+          
+          
           console.log(response.token);
-          this.loginService.loginUser(response.token);
-
+          console.log(response.role);
+          console.log(response.loginUser);
+          this.loginService.loginUser(response.token,response.role,response.loginUser,response.userId);
+          // var user_name = this.loginService.getLoggedInUsername(response.token);
+          console.log(this.credentials.username);
+          
               this._snackBar.open('Login success !', 'Dismiss', {
                 duration: 2000,
                 horizontalPosition: 'right', // Position on the screen
                 verticalPosition: 'top',
                 panelClass: ['success-snackbar'],
               });
-
+              
           window.location.href = '/dashboard';
+         
           // this.showSuccess();
         },
         //jab error aayegi tab error chalega
