@@ -4,6 +4,6 @@
             Welcome to Home Page
         </h1>
 
-        <a routerLink = "/login" mat-raised-button color="warn">Login here !!</a>
+        <a *ngIf="loggedIn" routerLink = "/login" mat-raised-button color="warn">Login here !!</a>
     </div>
 </div>

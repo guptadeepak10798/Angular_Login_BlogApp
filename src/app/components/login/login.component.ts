@@ -50,8 +50,15 @@ export class LoginComponent implements OnInit {
                 verticalPosition: 'top',
                 panelClass: ['success-snackbar'],
               });
-              
-          window.location.href = '/dashboard';
+
+             debugger;
+             console.log(response.role);
+           if(response.role =='ROLE_ADMIN')   
+            window.location.href = '/dashboard';
+          else{
+            debugger;
+            window.location.href = '/userProfile';
+          }
          
           // this.showSuccess();
         },

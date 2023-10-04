@@ -23,7 +23,12 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import { MatSnackBarModule} from '@angular/material/snack-bar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import {MatDialog, MatDialogModule} from '@angular/material/dialog';
+import { EditUserProfileComponent } from './components/edit-user-profile/edit-user-profile.component';
+import { UserManagementComponent } from './modules/components/user-management/user-management.component';
+import { AdminModule } from './modules/admin/admin.module';
+// import { AngularSlickgridModule } from 'angular-slickgrid';
 // import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
@@ -33,7 +38,10 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     LoginComponent,
     DashboardComponent,
     RegisterUserComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    EditUserProfileComponent,
+    UserManagementComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -52,6 +60,9 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     
     MatSnackBarModule,
     MatProgressBarModule,
+    MatDialogModule,
+    AdminModule
+    // AngularSlickgridModule
     // ToastrModule.forRoot({positionClass: 'toast-top-right',})
   ],
   providers: [

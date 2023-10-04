@@ -5,7 +5,9 @@ import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AuthGuard } from './services/auth.guard';
 import { RegisterUserComponent } from './components/register-user/register-user.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { EditUserProfileComponent } from './components/edit-user-profile/edit-user-profile.component';
+import { UserManagementComponent } from './modules/components/user-management/user-management.component';
 
 const routes: Routes = [
   {
@@ -34,7 +36,43 @@ const routes: Routes = [
     path:'register-user',
     component:RegisterUserComponent,
     pathMatch: 'full'
+  },
+  {
+    path:'edit-user-profile',
+    component:EditUserProfileComponent,
+    pathMatch: 'full',
+    canActivate:[AuthGuard]
+  },
+
+  { 
+    path: 'admin', 
+    loadChildren: () => import('./modules/admin/admin.module').then((m) => m.AdminModule) 
+    
+  },
+
+  {
+    path:'dashboard', 
+    component: DashboardComponent,
+    children: [
+      {
+        path:'user-mamangement', component: UserManagementComponent
+      }
+    ]
   }
+
+  
+  // {
+  //   path: 'dashboard',
+  //   component: DashboardComponent,
+  //   children: [
+     
+  //    {
+  //      path: 'user-management',
+  //      component: HomeComponent
+  //    }
+  //   ]
+  // }
+
 
 ];
 

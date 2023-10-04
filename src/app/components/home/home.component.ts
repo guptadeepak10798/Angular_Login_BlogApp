@@ -16,7 +16,10 @@ export class HomeComponent implements OnInit {
     model: 'Corolla',
     year: 2009,
   };
- 
+  
+  loggedIn : boolean ;
+
+
   debugger: any;
 
   data2: {name:String;age:number;hobbies: string[]} ={
@@ -26,6 +29,10 @@ export class HomeComponent implements OnInit {
   };
 
   ngOnInit(): void {
+    
+    const isTokenNull = localStorage.getItem('token') === null;
+    this.loggedIn = isTokenNull ;
+
     // debugger;
     // console.log("Home component life hook event !!");
     // console.log(this.name);

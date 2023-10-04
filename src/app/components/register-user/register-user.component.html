@@ -25,7 +25,7 @@
             <div class="form-group">
               <mat-form-field class="example-full-width" appearance="outline">
                 <mat-label>Full Name</mat-label>
-                <input matInput formControlName="name"/>
+                <input matInput formControlName="name" (keyup.enter)="onKeyUp(name.value)" #name />
               </mat-form-field>
             </div>
 

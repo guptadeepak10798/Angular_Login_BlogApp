@@ -45,4 +45,8 @@ export class RegisterUserComponent {
       console.log('res----', res);
     });
   }
+
+  onKeyUp(name:string){
+    console.log(name);
+  }
 }

@@ -20,7 +20,13 @@ export class UserService {
     return this.http.get(`${this.baseUrl}/api/users/${id}`)
   }
 
+//register user
+updateUserProfile(id:number,userData: any) {
+  console.log('upadte user function called');
+  return this.http.put(`${this.baseUrl}/api/users/${id}`, userData);
 
+  // http://localhost:9090/api/v1/auth/register
+}
   
 
 }
